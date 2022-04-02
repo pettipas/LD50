@@ -26,7 +26,7 @@ public class Item : MonoBehaviour
     {
         var fv = GetComponentInChildren<FollowVectorBlocks>().enabled = false;
         var rb = this.gameObject.AddComponent<Rigidbody>();
-        rb.AddForce(fallDir*2.0f, ForceMode.Impulse);
+        rb.AddForce(fallDir*4.0f, ForceMode.Impulse);
         this.enabled = false;
     }
 }
