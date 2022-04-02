@@ -8,11 +8,16 @@ public class Item : MonoBehaviour
     public LayerMask fallZone;
     public HeldState heldState;
 
+    public bool Held {
+        get{
+            return heldState.enabled;
+        }
+    }
+
     public void Update()
     {
         var hits = Physics.OverlapSphere(transform.position, 0.1f, fallZone);
         if(hits.Length > 0 && !heldState.enabled ){
-            
             Fall((hits[0].transform.position - transform.position).normalized);
         } 
     }

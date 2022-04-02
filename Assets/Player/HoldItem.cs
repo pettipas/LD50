@@ -7,20 +7,35 @@ public class HoldItem : MonoBehaviour
     public Item Held;
     public LayerMask itemMask;
     public Transform carryPoint;
+    public Item Detected;
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return) && Held == null) {
-            Collider[] hits = Physics.OverlapSphere(transform.position, 1.0f, itemMask);
-            if(hits.Length > 0){
-                Held = hits[0].GetComponentInParent<Item>();
-                Held.transform.SetParent(carryPoint, true);
-                Held.transform.position = new Vector3(carryPoint.transform.position.x,this.transform.position.y,carryPoint.transform.position.z);
-                Held.GetComponent<FollowVectorBlocks>().enabled = false;
-            }
+        // this should feel better because we give the player lots of frames to detect the item
+        Collider[] hits = Physics.OverlapSphere(transform.position, 1.0f, itemMask);
+        if(hits.Length > 0) {
+            Detected = hits[0].GetComponentInParent<Item>();
+        } else {
+            Detected = null;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Return) 
+        && Held == null 
+        && Detected != null 
+        && Detected.enabled 
+        && !Detected.Held) {
+            Held = Detected;
+            Held.transform.SetParent(carryPoint, true);
+            Held.transform.position = new Vector3(carryPoint.transform.position.x,this.transform.position.y,carryPoint.transform.position.z);
+            Held.GetComponent<FollowVectorBlocks>().enabled = false;
+            Held.GetComponent<HeldState>().enabled = true;
+            Detected = null;
+           
         } else if(Held != null && Input.GetKeyDown(KeyCode.Return)) {
             Held.GetComponent<FollowVectorBlocks>().enabled = true;
+            Held.GetComponent<HeldState>().enabled = false; 
             Held.transform.parent = null;
             Held = null;
+            Detected = null;
         }
     }
 
