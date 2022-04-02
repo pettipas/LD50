@@ -24,6 +24,7 @@ public class Item : MonoBehaviour
 
     public void Fall(Vector3 fallDir)
     {
+        SceneData.Instance.Current++;
         var fv = GetComponentInChildren<FollowVectorBlocks>().enabled = false;
         var rb = this.gameObject.AddComponent<Rigidbody>();
         rb.AddForce(fallDir*4.0f, ForceMode.Impulse);

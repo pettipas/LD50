@@ -8,6 +8,12 @@ public class Player : MonoBehaviour
     public Transform Body;
     public NavMeshAgent Agent;
 
+    public static Player Instance;
+
+    public void Awake(){
+        Instance = this;
+    }
+
     void Update()
     {
         float x = Input.GetAxisRaw("Horizontal");

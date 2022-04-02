@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public Item prefab;
-
+    public GameObject prefab;
+    public float rangeStart;
+    public float rangeEnd;
     public void Start() {
         StartCoroutine(SpawnItem());
     }
     public IEnumerator SpawnItem(){
-        yield return new WaitForSeconds(Random.Range(3, 7));
+        yield return new WaitForSeconds(Random.Range(rangeStart, rangeEnd));
         Instantiate(prefab, transform.position, Quaternion.identity);
         StartCoroutine(SpawnItem());
         yield break;
