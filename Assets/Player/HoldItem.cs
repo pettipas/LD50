@@ -14,7 +14,7 @@ public class HoldItem : MonoBehaviour
             if(hits.Length > 0){
                 Held = hits[0].GetComponentInParent<Item>();
                 Held.transform.SetParent(carryPoint, true);
-                Held.transform.position = carryPoint.transform.position;
+                Held.transform.position = new Vector3(carryPoint.transform.position.x,this.transform.position.y,carryPoint.transform.position.z);
                 Held.GetComponent<FollowVectorBlocks>().enabled = false;
             }
         } else if(Held != null && Input.GetKeyDown(KeyCode.Return)) {

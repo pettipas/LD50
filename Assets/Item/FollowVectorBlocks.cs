@@ -8,12 +8,16 @@ public class FollowVectorBlocks : MonoBehaviour
     public LayerMask conveyorMask;
     public Transform testPoint;
 
+    public void OnEnable() {
+       
+    }
+
     public void Update() {
-        if(vectorBlock != null){
+        if(vectorBlock != null) {
             transform.position += vectorBlock.Direction * vectorBlock.Speed * Time.smoothDeltaTime;
         }
         
-        var hits = Physics.OverlapSphere(testPoint.position, 0.2f, conveyorMask);
+        var hits = Physics.OverlapSphere(testPoint.position, 0.5f, conveyorMask);
         if(hits.Length > 0 ){
             var vb = hits[0].GetComponentInParent<VectorBlock>();
             vectorBlock = vb;
