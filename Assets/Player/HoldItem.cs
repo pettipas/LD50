@@ -14,6 +14,7 @@ public class HoldItem : MonoBehaviour
     public GameObject gunCarryArms;
 
     public Transform carryBody;
+    
 
     public bool Holding{
         get{
@@ -52,14 +53,23 @@ public class HoldItem : MonoBehaviour
             Held = null;
             Detected = null;
         } else if(Held != null && Input.GetKeyDown(KeyCode.Space)){
-            Held.transform.parent = null;
-            Held.Throw(carryBody.forward.normalized, 15);
-            Held = null;
-            Detected = null;
+            if(!Held.IsGun){
+                
+                Held.transform.parent = null;
+                Held.Throw(carryBody.forward.normalized, 15);
+                Held = null;
+                Detected = null;
+            } else {
+                var ammo = Held.Shoot(carryBody.forward.normalized);
+                if(ammo <= 0){
+                    Held.gameObject.SetActive(true);
+                }
+            }
+  
         }
 
         if(Held != null){
-            if(Held.IsGun){
+            if(Held.IsGun) {
                 Held.gameObject.SetActive(false);
                 gunCarryArms.SetActive(true);
                 carryArms.SetActive(false);
@@ -67,9 +77,7 @@ public class HoldItem : MonoBehaviour
                 gunCarryArms.SetActive(false);
                 carryArms.SetActive(true);
             }
-          
         } else {
-          
            gunCarryArms.SetActive(false);
            carryArms.SetActive(false);
         }

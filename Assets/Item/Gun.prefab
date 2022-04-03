@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &82629474464801513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4305955253297071796}
+  m_Layer: 3
+  m_Name: shootpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4305955253297071796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82629474464801513}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.103, z: 0.31}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.86956525}
+  m_Children: []
+  m_Father: {fileID: 7999371188864927079}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5118744508467204287
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +42,7 @@ GameObject:
   - component: {fileID: 5118744508467204286}
   - component: {fileID: 5118744508467204283}
   - component: {fileID: 5118744508467204284}
+  - component: {fileID: 1594296459299122070}
   m_Layer: 3
   m_Name: Gun
   m_TagString: Untagged
@@ -51,7 +82,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   heldState: {fileID: 5118744508467204283}
+  projectile: {fileID: 1594296459299122070}
   IsGun: 1
+  ammo: 10
+  bullet: {fileID: 9000412718171341807, guid: fd86fe7af6221dd4eb4132d9018ba043, type: 3}
+  isProjectile: 0
+  shootPoint: {fileID: 4305955253297071796}
 --- !u!114 &5118744508467204283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +118,26 @@ MonoBehaviour:
     m_Bits: 64
   testPoint: {fileID: 5118744509382698991}
   detectionRadius: 0.5
+--- !u!114 &1594296459299122070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5118744508467204287}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef466e8177c90046b56a193c6762833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 512
+  Radius: 1.5
+  explode: 0
+  timer: 0
+  tte: 4
+  expPrefab: {fileID: 4064734187486987664, guid: bcf45d015cf997a4eb9b7d91b77a0409, type: 3}
 --- !u!1 &5118744509382698976
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1940280012500390925}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: transformer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 6447697126976138131}
   - component: {fileID: 917927086031822654}
   - component: {fileID: 5887709128599543602}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ew_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 2698841460080138067}
   - component: {fileID: 5649519369487772704}
   - component: {fileID: 2792524531144611584}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: arm (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 1412229331090819388}
   - component: {fileID: 2706298719727759983}
   - component: {fileID: 1270698156094221570}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ew_rest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 2089818371857011986}
   - component: {fileID: 5765992744034401998}
   - component: {fileID: 224591136664527715}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ns_left_na
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 8854640852060777926}
   - component: {fileID: 8799804848126974249}
   - component: {fileID: 2402080860030497905}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ns_right_na
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421599923493946917}
   - component: {fileID: 4028189316131345590}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 410158275162744462}
   - component: {fileID: 5109826836578288162}
   - component: {fileID: 3499030295975654370}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ew_left_na
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7037136132597077277}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: carryarms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 4427985860162254457}
   - component: {fileID: 2541308542286157472}
   - component: {fileID: 7402846079039099697}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ew_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ GameObject:
   - component: {fileID: 4210498250439109141}
   - component: {fileID: 4210498250439109142}
   - component: {fileID: 9201401292070425625}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -797,7 +797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4210498251035130672}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: carrypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 4498229401792971979}
   - component: {fileID: 4364664877666969353}
   - component: {fileID: 8517445390287160526}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ns_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -910,7 +910,7 @@ GameObject:
   - component: {fileID: 2463081319283991677}
   - component: {fileID: 6909858754928245488}
   - component: {fileID: 2386343427773646758}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 6930043863450239203}
   - component: {fileID: 2508046263202290260}
   - component: {fileID: 8902206971895005366}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1072,7 +1072,7 @@ GameObject:
   - component: {fileID: 3161638826329880798}
   - component: {fileID: 7679765884126324723}
   - component: {fileID: 2047853477015642602}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ns_rest_na
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1153,7 @@ GameObject:
   - component: {fileID: 8138916307218093588}
   - component: {fileID: 3791304719262964559}
   - component: {fileID: 1291911431451262903}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ew_rest_na
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1234,7 +1234,7 @@ GameObject:
   - component: {fileID: 1989634667148543437}
   - component: {fileID: 6270296075484222053}
   - component: {fileID: 6408905633979332617}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: arm (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1313,7 +1313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 536022221947410753}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: gun_carry_arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1348,7 +1348,7 @@ GameObject:
   - component: {fileID: 6019834763744012065}
   - component: {fileID: 1863833642389742734}
   - component: {fileID: 8830105970552350253}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1427,7 +1427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8125306169354944453}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: carrybody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1462,7 +1462,7 @@ GameObject:
   - component: {fileID: 4433180064957867514}
   - component: {fileID: 7330556325091632305}
   - component: {fileID: 8861895360095740716}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ew_right_na
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1543,7 +1543,7 @@ GameObject:
   - component: {fileID: 8591221478860070553}
   - component: {fileID: 151322225312818088}
   - component: {fileID: 4128654330025002344}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ns_rest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1624,7 +1624,7 @@ GameObject:
   - component: {fileID: 8394969741697119353}
   - component: {fileID: 3888149209877546638}
   - component: {fileID: 8499293549866618777}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ns_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}

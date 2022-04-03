@@ -10,8 +10,10 @@ public class Item : MonoBehaviour
     public ProjectileState projectile;
     public bool IsGun;
     public int ammo;
-
+    public Bullet bullet;
     public bool isProjectile;
+
+    public Transform shootPoint;
 
     public bool Held {
         get{
@@ -31,6 +33,17 @@ public class Item : MonoBehaviour
         if(hits.Length > 0 && !heldState.enabled ){
             Fall((hits[0].transform.position - transform.position).normalized);
         } 
+    }
+
+    public int Shoot(Vector3 shootDir){
+        if(ammo > 0) {
+           ammo--;
+           var bu = bullet.Duplicate(shootPoint.position);
+           bu.direction = shootDir.normalized;
+        } else {
+            IsGun = false;
+        }
+        return ammo;
     }
 
     public void Fall(Vector3 fallDir)
