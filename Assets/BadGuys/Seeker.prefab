@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2917915906813026139}
   - component: {fileID: 1549111412593502314}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_Children:
   - {fileID: 7949104283159160144}
   m_Father: {fileID: 3445348601616334056}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1549111412593502314
 Animator:
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 3445348601616334056}
   - component: {fileID: 3445348601616334059}
   - component: {fileID: 3445348601616334057}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Seeker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,6 +80,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 7795727499249096868}
   - {fileID: 2917915906813026139}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,6 +100,7 @@ MonoBehaviour:
   NavAgent: {fileID: 3445348601616334057}
   target: {fileID: 0}
   body: {fileID: 2917915906813026139}
+  explode: {fileID: 4064734187486987664, guid: 478b1b51e6751144397deff4bf706f82, type: 3}
 --- !u!195 &3445348601616334057
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -132,7 +134,7 @@ GameObject:
   - component: {fileID: 7540931864738222225}
   - component: {fileID: 8470542258011052821}
   - component: {fileID: 6656034211840302360}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rat_run_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,6 +204,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3733933157361955120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7795727499249096868}
+  - component: {fileID: 6834554969503199136}
+  m_Layer: 9
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7795727499249096868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3733933157361955120}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3445348601616334056}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6834554969503199136
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3733933157361955120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.85
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5254509418412006081
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +259,7 @@ GameObject:
   - component: {fileID: 1939828418125356485}
   - component: {fileID: 5610540199325486703}
   - component: {fileID: 1046416436795420015}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rat_run_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +340,7 @@ GameObject:
   - component: {fileID: 8634571223092865891}
   - component: {fileID: 7716099121619125253}
   - component: {fileID: 8095246449865845119}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rat_attack_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +421,7 @@ GameObject:
   - component: {fileID: 8631087781037560323}
   - component: {fileID: 740775873540677295}
   - component: {fileID: 7594209952050601305}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rat_rest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7949104283159160144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: transformer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +537,7 @@ GameObject:
   - component: {fileID: 2157272993733261805}
   - component: {fileID: 4847136406768849319}
   - component: {fileID: 2894612948725110637}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rat_attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

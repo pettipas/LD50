@@ -14,8 +14,8 @@ TagManager:
   - VectorBlock
   - FallZone
   - Nav
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 

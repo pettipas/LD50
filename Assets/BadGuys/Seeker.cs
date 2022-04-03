@@ -8,6 +8,12 @@ public class Seeker : MonoBehaviour
     public NavMeshAgent NavAgent;
     public GameObject target;
     public Transform body;
+    public Explode explode;
+
+    public void Death(){
+        var epo = explode.Duplicate(transform.position, Quaternion.identity);
+        epo.DoExplode(this.gameObject, 2.0f);
+    }
 
     public void Update() {
         NavAgent.updateRotation = false;

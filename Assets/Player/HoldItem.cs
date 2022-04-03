@@ -11,6 +11,10 @@ public class HoldItem : MonoBehaviour
 
     public GameObject carryArms;
 
+    public GameObject gunCarryArms;
+
+    public Transform carryBody;
+
     public bool Holding{
         get{
             return Held != null;
@@ -43,14 +47,31 @@ public class HoldItem : MonoBehaviour
             Held.GetComponent<FollowVectorBlocks>().enabled = true;
             Held.GetComponent<HeldState>().enabled = false; 
             Held.transform.parent = null;
+            if(Held != null && Held.IsGun)
+                Held.gameObject.SetActive(true);
+            Held = null;
+            Detected = null;
+        } else if(Held != null && Input.GetKeyDown(KeyCode.Space)){
+            Held.transform.parent = null;
+            Held.Throw(carryBody.forward.normalized, 15);
             Held = null;
             Detected = null;
         }
 
         if(Held != null){
-            carryArms.SetActive(true);
+            if(Held.IsGun){
+                Held.gameObject.SetActive(false);
+                gunCarryArms.SetActive(true);
+                carryArms.SetActive(false);
+            } else {
+                gunCarryArms.SetActive(false);
+                carryArms.SetActive(true);
+            }
+          
         } else {
-            carryArms.SetActive(false);
+          
+           gunCarryArms.SetActive(false);
+           carryArms.SetActive(false);
         }
     }
 

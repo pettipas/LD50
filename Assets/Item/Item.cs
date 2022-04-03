@@ -7,10 +7,21 @@ public class Item : MonoBehaviour
 {
     public LayerMask fallZone;
     public HeldState heldState;
+    public ProjectileState projectile;
+    public bool IsGun;
+    public int ammo;
+
+    public bool isProjectile;
 
     public bool Held {
         get{
             return heldState.enabled;
+        }
+    }
+
+    public bool IsProjectile {
+        get{
+            return projectile.enabled;
         }
     }
 
@@ -27,7 +38,18 @@ public class Item : MonoBehaviour
         SceneData.Instance.Current++;
         var fv = GetComponentInChildren<FollowVectorBlocks>().enabled = false;
         var rb = this.gameObject.AddComponent<Rigidbody>();
+        heldState.enabled = false;
         rb.AddForce(fallDir*4.0f, ForceMode.Impulse);
         this.enabled = false;
+    }
+
+    public void Throw(Vector3 direction, float power)
+    {
+        var fv = GetComponentInChildren<FollowVectorBlocks>().enabled = false;
+        var rb = this.gameObject.AddComponent<Rigidbody>();
+        rb.AddForce(direction*power, ForceMode.Impulse);
+        this.enabled = false;
+        heldState.enabled = false;
+        projectile.enabled = true;
     }
 }

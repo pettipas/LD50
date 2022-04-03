@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
         Instance = this;
     }
 
+    public void Death(){}
+
     void Update()
     {
         float x = Input.GetAxisRaw("Horizontal");
