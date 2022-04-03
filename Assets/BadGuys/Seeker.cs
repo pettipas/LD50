@@ -13,7 +13,7 @@ public class Seeker : MonoBehaviour
         NavAgent.updateRotation = false;
         if(Player.Instance != null) {
             var dir = NavAgent.velocity.normalized;
-            if(dir != Vector3.zero ){
+            if(dir != Vector3.zero) {
                 body.forward = dir;
             }
             NavAgent.SetDestination(Player.Instance.transform.position);
