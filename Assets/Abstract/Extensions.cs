@@ -16,7 +16,6 @@ public static class Extensions {
     }
 
     public static void SafePlay(this Animator animator, string a, int layer = 0, float time = 0) {
-
         if (!animator.gameObject.activeSelf) {
             Debug.Log("WARNING animator is disabled, trying to play: " + a);
             return;

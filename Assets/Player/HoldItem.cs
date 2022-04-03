@@ -8,6 +8,15 @@ public class HoldItem : MonoBehaviour
     public LayerMask itemMask;
     public Transform carryPoint;
     public Item Detected;
+
+    public GameObject carryArms;
+
+    public bool Holding{
+        get{
+            return Held != null;
+        }
+    }
+
     public void Update()
     {
         // this should feel better because we give the player lots of frames to detect the item
@@ -36,6 +45,12 @@ public class HoldItem : MonoBehaviour
             Held.transform.parent = null;
             Held = null;
             Detected = null;
+        }
+
+        if(Held != null){
+            carryArms.SetActive(true);
+        } else {
+            carryArms.SetActive(false);
         }
     }
 
