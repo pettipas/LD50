@@ -4932,7 +4932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 513
   impact: {fileID: 4064734187486987664, guid: eee569f825db2f74e8aa3e48b14d278b, type: 3}
   direction: {x: 0, y: 0, z: 0}
   Speed: 20

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class SceneData : MonoBehaviour
 {
@@ -10,16 +12,15 @@ public class SceneData : MonoBehaviour
     public bool LevelComplete;
     public bool running;
     public Animator doors;
+
+    public Text remaining;
     public void Awake() {
         Instance = this;
     }
-    public bool GoToNextLevel {
-        get {
-            return LevelComplete;
-        }
-    }
+
     public IEnumerator DoLevelEnd() {
         doors.SafePlay("doors_close");
+        yield return null;
         while(!doors.AtEndOfAnimation()){
             yield return null;
         }
@@ -28,6 +29,7 @@ public class SceneData : MonoBehaviour
         yield break;
     }
     public void Update() {
+        remaining.text = (Quota - Current).ToString();
         if(Quota <= Current && !running){
             running = true;
             StartCoroutine(DoLevelEnd());

@@ -17,13 +17,16 @@ public class Bullet : MonoBehaviour
             return;
         }
         transform.position += direction * Speed * Time.smoothDeltaTime;    
-        var enemyHits = Physics.OverlapSphere(transform.position, 1.0f, mask);
+        var enemyHits = Physics.OverlapSphere(transform.position, 0.5f, mask);
         if(enemyHits.Length > 0){
             var enemy = enemyHits[0];
             var seek = enemy.transform.GetComponentInParent<Seeker>();
-            seek.Death();
+            if(seek != null){
+                seek.Death();
+            }
             var exp = impact.Duplicate(transform.position, Quaternion.identity);
             exp.DoExplode(this.gameObject, 1.0f);
+         
         }
     }
 }

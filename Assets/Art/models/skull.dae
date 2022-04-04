@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <contributor>
+      <authoring_tool>Minddesk Qubicle 3</authoring_tool>
+      <comments>Get Qubicle at www.getqubicle.com</comments>
+    </contributor>
+    <created>2022-04-039:26 PM21:26:39:076</created>
+    <modified>2022-04-039:26 PM21:26:39:076</modified>
+    <unit meter="1.0" />
+  </asset>
+  <library_geometries>
+    <geometry name="skull" id="skull-lib">
+      <mesh>
+        <source id="skull-position">
+          <float_array id="skull-position-array" count="150">8.0 19.0 -7.0 8.0 7.0 -7.0 -8.0 7.0 -7.0 -8.0 19.0 -7.0 5.0 7.0 -7.0 5.0 4.0 -7.0 -5.0 4.0 -7.0 -5.0 7.0 -7.0 -6.0 15.0 6.0 -6.0 10.0 6.0 -1.0 10.0 6.0 -1.0 15.0 6.0 1.0 15.0 6.0 1.0 10.0 6.0 6.0 10.0 6.0 6.0 15.0 6.0 -8.0 15.0 6.0 -8.0 10.0 6.0 8.0 10.0 6.0 8.0 15.0 6.0 -8.0 19.0 6.0 8.0 19.0 6.0 -5.0 7.0 6.0 -5.0 5.0 6.0 5.0 5.0 6.0 5.0 7.0 6.0 -8.0 9.0 6.0 -8.0 7.0 6.0 -1.0 7.0 6.0 -1.0 9.0 6.0 1.0 9.0 6.0 1.0 7.0 6.0 8.0 7.0 6.0 8.0 9.0 6.0 -5.0 4.0 6.0 -3.0 4.0 6.0 -3.0 5.0 6.0 -1.0 4.0 6.0 -1.0 5.0 6.0 1.0 4.0 6.0 1.0 5.0 6.0 3.0 4.0 6.0 3.0 5.0 6.0 5.0 4.0 6.0 -5.0 4.0 5.0 5.0 4.0 5.0 -3.0 4.0 5.0 -1.0 4.0 5.0 1.0 4.0 5.0 3.0 4.0 5.0 </float_array>
+          <technique_common>
+            <accessor source="#skull-position-array" stride="3" count="50">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="skull-normal">
+          <float_array id="skull-normal-array" count="18">0.0 0.0 1.0 0.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 -1.0 0.0</float_array>
+          <technique_common>
+            <accessor source="#skull-normal-array" stride="3" count="6">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="skull-color">
+          <float_array id="skull-color-array" count="8">0.933 0.933 0.933 1.0 0.0 0.0 0.0 1.0 </float_array>
+          <technique_common>
+            <accessor source="#skull-color-array" stride="4" count="2">
+              <param name="R" type="float" />
+              <param name="G" type="float" />
+              <param name="B" type="float" />
+              <param name="A" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="skull-vertex">
+          <input semantic="POSITION" source="#skull-position" />
+        </vertices>
+        <polylist count="31">
+          <input offset="0" semantic="VERTEX" source="#skull-vertex" />
+          <input offset="1" semantic="NORMAL" source="#skull-normal" />
+          <input offset="2" semantic="COLOR" source="#skull-color" />
+          <vcount>4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </vcount>
+          <p>0 1 0 1 1 0 2 1 0 3 1 0 4 1 0 5 1 0 6 1 0 7 1 0 8 0 1 9 0 1 10 0 1 11 0 1 12 0 1 13 0 1 14 0 1 15 0 1 16 0 0 17 0 0 9 0 0 8 0 0 11 0 0 10 0 0 13 0 0 12 0 0 15 0 0 14 0 0 18 0 0 19 0 0 20 0 0 16 0 0 19 0 0 21 0 0 22 0 0 23 0 0 24 0 0 25 0 0 26 0 0 27 0 0 28 0 0 29 0 0 30 0 0 31 0 0 32 0 0 33 0 0 29 0 1 28 0 1 31 0 1 30 0 1 17 0 0 26 0 0 33 0 0 18 0 0 23 0 0 34 0 0 35 0 0 36 0 0 36 0 1 35 0 1 37 0 1 38 0 1 38 0 0 37 0 0 39 0 0 40 0 0 40 0 1 39 0 1 41 0 1 42 0 1 42 0 0 41 0 0 43 0 0 24 0 0 3 2 0 2 2 0 27 2 0 20 2 0 7 2 0 6 2 0 34 2 0 22 2 0 21 3 0 32 3 0 1 3 0 0 3 0 25 3 0 43 3 0 5 3 0 4 3 0 3 4 0 20 4 0 21 4 0 0 4 0 44 5 0 6 5 0 5 5 0 45 5 0 27 5 0 2 5 0 7 5 0 22 5 0 25 5 0 4 5 0 1 5 0 32 5 0 34 5 0 44 5 0 46 5 0 35 5 0 35 5 1 46 5 1 47 5 1 37 5 1 37 5 0 47 5 0 48 5 0 39 5 0 39 5 1 48 5 1 49 5 1 41 5 1 41 5 0 49 5 0 45 5 0 43 5 0 </p>
+        </polylist>
+      </mesh>
+    </geometry>)
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="skull-scene" name="skull-scene">
+      <node sid="skull" id="skull" name="skull">
+        <translate sid="translate">104.00 53.00 0.00</translate>
+        <instance_geometry url="#skull-lib">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="skull-material" target="#skull-material" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene name="" sid="" url="#skull-scene" />
+  </scene>
+</COLLADA>

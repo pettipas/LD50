@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float Speed;
@@ -15,15 +16,35 @@ public class Player : MonoBehaviour
     public Vector3 CompassDirs;
 
     public HoldItem holdItem;
+    
+    public int health; 
 
-    public void Awake(){
+    public LayerMask enemyMask;
+
+    public void Awake() {
         Instance = this;
     }
-
     public void Death(){}
+    public float  timer;
 
+    public Text healthInd;
+
+    public ParticleSystem bloodLoss;
+    
     void Update()
     {
+        timer += Time.deltaTime;
+
+        if(timer > 0.7f){
+            timer = 0;
+            Collider[] hits = Physics.OverlapSphere(transform.position, 1.5f, enemyMask);
+            if(hits.Length > 0){
+                health -= 1;
+                bloodLoss.Emit(3);
+            }
+           
+        }
+
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
         Vector3 dir = new Vector3(x,0,z);
@@ -51,5 +72,13 @@ public class Player : MonoBehaviour
             CompassDirs = cpd;
             Animator.SafePlay("player_rest" + posfix);
         }
+
+        string h = "";
+        for (int i = 0; i < health; i++)
+        {
+             h += "||";
+        }
+
+        healthInd.text = h;
     }
 }
