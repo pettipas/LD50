@@ -24,13 +24,18 @@ public class Player : MonoBehaviour
     public void Awake() {
         Instance = this;
     }
-    public void Death(){}
+    public void Death(){
+        health = 0;
+    }
     public float  timer;
 
     public Text healthInd;
 
     public ParticleSystem bloodLoss;
+
+    public PlayerDeath death;
     
+    public bool dead;
     void Update()
     {
         timer += Time.deltaTime;
@@ -80,5 +85,14 @@ public class Player : MonoBehaviour
         }
 
         healthInd.text = h;
+    }
+
+    public void LateUpdate(){
+
+        if(health <= 0 && !dead){
+            dead = true;
+            var deth = death.Duplicate(transform.position, Quaternion.identity);
+            deth.DoExplode(this.gameObject,1.0f);
+        }
     }
 }
