@@ -189,7 +189,7 @@ MonoBehaviour:
   Radius: 3
   explode: 0
   timer: 0
-  tte: 3
+  tte: 2
   expPrefab: {fileID: 4064734187486987664, guid: bcf45d015cf997a4eb9b7d91b77a0409, type: 3}
 --- !u!1 &5118744509382698976
 GameObject:

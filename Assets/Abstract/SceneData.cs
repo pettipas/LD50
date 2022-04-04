@@ -9,7 +9,7 @@ public class SceneData : MonoBehaviour
     public int Current;
     public bool LevelComplete;
     public bool running;
-
+    public Animator doors;
     public void Awake() {
         Instance = this;
     }
@@ -19,8 +19,10 @@ public class SceneData : MonoBehaviour
         }
     }
     public IEnumerator DoLevelEnd() {
-        // wind everything down in the scene
-        // gameflow does the rest 
+        doors.SafePlay("doors_close");
+        while(!doors.AtEndOfAnimation()){
+            yield return null;
+        }
         LevelComplete = true;
         running = false;
         yield break;
